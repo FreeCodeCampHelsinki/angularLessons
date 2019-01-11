@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'app-pay-view',
   templateUrl: './pay-view.component.html',
   styleUrls: ['./pay-view.component.css']
 })
-export class PayViewComponent implements OnChanges {
+export class PayViewComponent implements DoCheck {
 
   @Input('inData') blahData:{} = {};
   grossPay:number = 0.0;
@@ -14,7 +14,7 @@ export class PayViewComponent implements OnChanges {
 
   constructor() { }
 
-  ngOnChanges() {
+  ngDoCheck() {
     console.log(this.blahData);
     switch(this.blahData['role'])
     {

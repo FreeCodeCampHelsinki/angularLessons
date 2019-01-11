@@ -13,6 +13,7 @@ import { PayViewComponent } from './pay-view/pay-view.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { ServicesComponent } from './services/services.component';
 import { DeliveryService } from './delivery.service';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DeliveryService } from './delivery.service';
     PayCalcComponent,
     PayViewComponent,
     DirectivesComponent,
-    ServicesComponent
+    ServicesComponent,
+    LifecycleComponent
   ],
   imports: [
     BrowserModule,
