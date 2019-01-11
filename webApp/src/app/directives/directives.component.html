@@ -1,0 +1,19 @@
+<h2>
+  Directives
+</h2>
+<div *ngIf="boolVal">
+  This is so very cool!
+</div>
+<button (click)="boolVal = !boolVal">Click Me</button>
+<hr/>
+<ul>
+  <li *ngFor="let x of fruits">{{x}}</li>
+</ul>
+<div *ngFor="let person of people" style="border: solid 1px black;">
+  <h3 [ngStyle]="{'background-color':doColor()}"><b>Name:</b>{{person.name}}</h3>
+  <h3><b>Age:</b>{{person.age}}</h3>
+</div>
+
+<select>
+  <option *ngFor="let country of countries">{{country}}</option>
+</select>

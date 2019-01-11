@@ -1,0 +1,8 @@
+<h2>This is the Parent</h2>
+<hr/>
+<div class="boxWhatever">
+<app-child 
+  [passit]="{name:'Whatever',age:120}"
+  (someEvent)="parentDoSomething($event)"
+>Markku was here</app-child>
+</div>

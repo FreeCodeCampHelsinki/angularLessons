@@ -1,0 +1,11 @@
+<div class="container">
+<h2>PAYMASTER 9000</h2>
+Hours: <input type="number" [value]='hourVal' /><br/><br/>
+Role: <select (change)='roleChange($event)'>
+  <option value="staff">Staff</option>
+  <option value="super">Supervisor</option>
+  <option value="mgr">Manager</option>
+</select><br/><br/>
+<button (click)="doCalculate()">Calculate</button>
+
+</div>

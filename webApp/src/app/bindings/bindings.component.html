@@ -1,0 +1,10 @@
+<h2>String interpolation: {{someVar}}</h2>
+<hr/>
+<h3>Attribute binding</h3>
+<button [disabled]="isDisabled">Click Me</button>
+<hr/>
+<h3>Event Binding</h3>
+<button (dblclick)="this.isDisabled = !this.isDisabled">Toggle</button>
+<hr/>
+<h3>Two-Way Binding</h3>
+<input type="number" [(ngModel)]='someVar' />
