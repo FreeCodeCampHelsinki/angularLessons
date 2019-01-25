@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule,Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -18,9 +19,11 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
+import { ObservablesComponent } from './observables/observables.component';
 
 const routes:Routes = [
   {path:'',component:ParentComponent}
+  ,{path:'observe',component:ObservablesComponent}
   ,{
     path:'home',component:HomeComponent,children:[
       {path:'freyja',component:SampleComponent},
@@ -48,12 +51,14 @@ const routes:Routes = [
     LifecycleComponent,
     MenuComponent,
     HomeComponent,
-    ErrorComponent
+    ErrorComponent,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [DeliveryService],
   bootstrap: [AppComponent]
