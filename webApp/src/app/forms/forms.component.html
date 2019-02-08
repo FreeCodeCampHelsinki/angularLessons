@@ -1,0 +1,10 @@
+<h2>Forms Component</h2>
+<form (ngSubmit)="processForm(myForm)" #myForm="ngForm">
+  <input type="text" name="userInput" pattern="(0[1-9]|[12][0-9]|3[01])(0[1-9]|1[0-2])" ngModel #uinput="ngModel" />
+  <span [hidden]="uinput.valid">You suck!</span>
+  <br>
+  <input type="number" name="age" ngModel required #age="ngModel" />
+  <span [hidden]="age.invalid&&age.untouched">Please enter a number, dingbat!</span>
+  <br/>
+  <button [disabled]="myForm.invalid">Submit</button>
+</form>

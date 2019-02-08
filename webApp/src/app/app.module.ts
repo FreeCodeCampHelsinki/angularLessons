@@ -20,9 +20,11 @@ import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 import { ObservablesComponent } from './observables/observables.component';
+import { FormsComponent } from './forms/forms.component';
 
 const routes:Routes = [
   {path:'',component:ParentComponent}
+  ,{path:'forms',component:FormsComponent}
   ,{path:'observe',component:ObservablesComponent}
   ,{
     path:'home',component:HomeComponent,children:[
@@ -52,7 +54,8 @@ const routes:Routes = [
     MenuComponent,
     HomeComponent,
     ErrorComponent,
-    ObservablesComponent
+    ObservablesComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
